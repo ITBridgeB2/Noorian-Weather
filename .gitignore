@@ -1,0 +1,6 @@
+#NODE MODULES
+Front-End/weather-app/node_modules/
+Back-End/node_modules/
+
+#Logs
+*.log

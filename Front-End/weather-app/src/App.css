@@ -1,0 +1,151 @@
+/* Reset and global styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  background-image: url('https://media.istockphoto.com/id/1176320050/photo/weather-forecast-on-a-digital-display-7-day-dashboard-3d-illustration.jpg?b=1&s=612x612&w=0&k=20&c=XMaXwGWhwpPBOf6_pdDoI8wVDOg6Yrg3tAhLx5q3YsM=');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Container layout */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Card containers */
+.left-panel, .right-panel {
+  width: 360px;
+  min-height: 300px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Weather card layout */
+.weather-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.weather-card input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.weather-card button,
+.history-toggle {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #3a80e9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.weather-card button:hover,
+.history-toggle:hover {
+  background-color: #2c67c4;
+}
+
+/* Result and error display */
+.result, .error {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.error {
+  background-color: #ffdede;
+  color: #b20000;
+}
+
+/* History styles */
+.right-panel h3 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.right-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e9f3ff;
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  border-radius: 5px;
+}
+
+.history-item span {
+  font-size: 15px;
+}
+
+.history-item button {
+  background: #ff4d4d;
+  border: none;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.history-item button:hover {
+  background: #d93636;
+}
+
+/* Responsive tweaks */
+@media (max-width: 800px) {
+  .app-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-panel, .right-panel {
+    width: 90%;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.refresh-btn {
+  margin-left: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.refresh-btn:hover {
+  background-color: #217dbb;
+}
